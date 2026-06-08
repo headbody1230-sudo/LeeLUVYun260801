@@ -51,15 +51,15 @@ export const weddingConfig = {
     tel: "02-3424-7000",
     naverMapId: "웨딩스퀘어 강변", // 네이버 지도 검색용 장소명
     coordinates: {
-      latitude: 37.5358,
-      longitude: 127.0959,
+      latitude: 37.535726,
+      longitude: 127.095709,
     },
-    placeId: "123456789", // 네이버 지도 장소 ID
+    placeId: "31761747", // 네이버 지도 장소 ID
     mapZoom: "17", // 지도 줌 레벨
     mapNaverCoordinates: "14141300,4507203,15,0,0,0,dh", // 네이버 지도 길찾기 URL용 좌표 파라미터 (구 형식)
     transportation: {
-      subway: "지하철역 1번 출구에서 도보 5분",
-      bus: "간선\n 101, 102, 103\n지선\n 1234, 5678",
+      subway: "강변역 1번, 2번 출구 방면\n지하통로 연결",
+      bus: "동서울 종합터미널\n2224, 1112, 1117, 1650, 5600, 5700\n광진 01, 03, 04",
     },
     parking: "건물 지하 주차장 이용 가능 (2시간 무료)",
     // 신랑측 배차 안내

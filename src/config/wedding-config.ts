@@ -64,20 +64,20 @@ export const weddingConfig = {
     parking: "건물 지하 주차장 이용 가능 (2시간 무료)",
     // 신랑측 배차 안내
     groomShuttle: {
-      location: "신랑측 배차 출발지",
-      departureTime: "오전 10시 30분 출발",
+      location: "",
+      departureTime: "",
       contact: {
-        name: "담당자명",
-        tel: "010-1234-5678"
+        name: "",
+        tel: ""
       }
     },
     // 신부측 배차 안내
     brideShuttle: {
-      location: "신부측 배차 출발지",
-      departureTime: "오전 11시 출발",
+      location: "",
+      departureTime: "",
       contact: {
-        name: "담당자명",
-        tel: "010-9876-5432"
+        name: "",
+        tel: ""
       }
     }
   },

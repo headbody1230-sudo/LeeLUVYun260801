@@ -15,7 +15,7 @@ export const weddingConfig = {
   meta: {
     title: "이상화 ❤️ 윤홍주의 결혼식에 초대합니다",
     description: "결혼식 초대장",
-    ogImage: "/images/main.jpg.jpg",
+    ogImage: "/images/main.jpg",
     noIndex: true,
     _jwk_watermark_id: uniqueIdentifier,
   },
@@ -23,7 +23,7 @@ export const weddingConfig = {
   // 메인 화면
   main: {
     title: "Wedding Invitation",
-    image: "/images/main.jpg.jpg",
+    image: "/images/main.jpg",
     date: "2026년 8월 1일 토요일\n오후 3시 20분",
     venue: "웨딩스퀘어 강변"
   },

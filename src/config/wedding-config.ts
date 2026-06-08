@@ -62,6 +62,23 @@ export const weddingConfig = {
       bus: "동서울 종합터미널\n2224, 1112, 1117, 1650, 5600, 5700\n광진 01, 03, 04",
     },
     parking: "건물 지하 주차장 이용 가능 (2시간 무료)",
+        // 신랑측 배차 안내
+    groomShuttle: {
+      location: "",
+      departureTime: "",
+      contact: {
+        name: "",
+        tel: ""
+      }
+    },
+    // 신부측 배차 안내
+    brideShuttle: {
+      location: "",
+      departureTime: "",
+      contact: {
+        name: "",
+        tel: ""
+      }
     }
   },
 

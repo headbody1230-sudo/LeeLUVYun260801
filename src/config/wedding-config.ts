@@ -31,7 +31,7 @@ export const weddingConfig = {
   // 소개글
   intro: {
     title: "",
-    text: "서로를 바라보며 걸어온\n소중한 발걸음이\n이제 하나의 길로 이어집니다.\n\n사랑과 믿음으로\n새 가정을 이루는 저희 두 사람의\n작은 시작을 알려드립니다."
+    text: "온 세상을 물들이는 노을처럼\n서로의 삶에 스며들었습니다.\n\n가장 아름다운 순간에 약속합니다.\n저희의 첫걸음에 함께해주세요."
   },
 
   // 결혼식 일정
@@ -41,18 +41,18 @@ export const weddingConfig = {
     day: 1,
     hour: 15,
     minute: 20,
-    displayDate: "2026.05.16 SAT PM 12:30",
+    displayDate: "2026.08.1 SAT PM 03:20",
   },
 
   // 장소 정보
   venue: {
-    name: "웨딩홀 이름",
-    address: "서울특별시 강남구 테헤란로 123\n웨딩홀 이름",
-    tel: "02-1234-5678",
-    naverMapId: "웨딩홀 이름", // 네이버 지도 검색용 장소명
+    name: "웨딩스퀘어 강변 3층 루시드홀",
+    address: "서울특별시 광진구 광나루로56길 85\n웨딩스퀘어 강변",
+    tel: "02-3424-7000",
+    naverMapId: "웨딩스퀘어 강변", // 네이버 지도 검색용 장소명
     coordinates: {
-      latitude: 37.5665,
-      longitude: 126.9780,
+      latitude: 37.5358,
+      longitude: 127.0959,
     },
     placeId: "123456789", // 네이버 지도 장소 ID
     mapZoom: "17", // 지도 줌 레벨
@@ -103,16 +103,16 @@ export const weddingConfig = {
   invitation: {
     message: "한 줄기 별빛이 되어 만난 인연\n평생을 함께 걸어가려 합니다.\n\n소중한 분들의 축복 속에\n저희 두 사람이 첫 걸음을 내딛습니다.\n\n귀한 시간 내어 함께해 주신다면\n그 어떤 축복보다 값진 선물이 될 것입니다.",
     groom: {
-      name: "신랑이름",
+      name: "이상화",
       label: "아들",
-      father: "신랑아버지",
-      mother: "신랑어머니",
+      father: "이웅로",
+      mother: "송혜숙",
     },
     bride: {
-      name: "신부이름",
+      name: "윤홍주",
       label: "딸",
-      father: "신부아버지",
-      mother: "신부어머니",
+      father: "윤종영",
+      mother: "김경란",
     },
   },
 

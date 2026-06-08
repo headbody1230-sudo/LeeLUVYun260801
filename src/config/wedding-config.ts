@@ -78,7 +78,7 @@ export const weddingConfig = {
       contact: {
         name: "",
         tel: ""
-      }    
+      }
     }
   },
 

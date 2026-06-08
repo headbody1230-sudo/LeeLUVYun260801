@@ -21,26 +21,6 @@ const formatTextWithLineBreaks = (text: string) => {
   ));
 };
 
-interface VenueSectionProps {
-  bgColor?: 'white' | 'beige';
-}
-
-const VenueSection = ({ bgColor = 'white' }: VenueSectionProps) => {
-  const mapRef = useRef<HTMLDivElement>(null);
-  const [mapLoaded, setMapLoaded] = useState(false);
-  const [debugInfo, setDebugInfo] = useState<string>('');
-  const [mapError, setMapError] = useState(false);
-  // 배차 안내 펼침/접기 상태 관리
-  const [expandedShuttle, setExpandedShuttle] = useState<'groom' | 'bride' | null>(null);
-  
-  // 배차 안내 펼침/접기 토글 함수
-  const toggleShuttle = (shuttle: 'groom' | 'bride') => {
-    if (expandedShuttle === shuttle) {
-      setExpandedShuttle(null);
-    } else {
-      setExpandedShuttle(shuttle);
-    }
-  };
   
   // 디버깅 정보 출력
   useEffect(() => {

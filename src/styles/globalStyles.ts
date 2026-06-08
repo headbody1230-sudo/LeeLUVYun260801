@@ -62,7 +62,7 @@ export const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'GabiaCheongyeon';
-    src: url('/fonts/GabiaCheongyeon.otf') format('otf');
+    src: url('/fonts/GabiaCheongyeon.otf') format('opentype');
     font-weight: 800;
     font-style: normal;
     font-display: block;

@@ -119,4 +119,12 @@ export const GlobalStyle = createGlobalStyle`
     --text-light: #999999;
     --jwk-id: "${watermarkId}";
   }
+  
+  /* 이미지 저장 및 우클릭(길게 누르기) 차단 */
+  img {
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+    pointer-events: none;
+  }
 `; 

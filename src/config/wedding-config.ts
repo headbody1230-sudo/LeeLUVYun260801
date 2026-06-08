@@ -62,24 +62,12 @@ export const weddingConfig = {
       bus: "동서울 종합터미널\n2224, 1112, 1117, 1650, 5600, 5700\n광진 01, 03, 04",
     },
     parking: "건물 지하 주차장 이용 가능 (2시간 무료)",
-        // 신랑측 배차 안내
-    groomShuttle: {
-      location: "",
-      departureTime: "",
-      contact: {
-        name: "",
-        tel: ""
-      }
-    },
-    // 신부측 배차 안내
-    brideShuttle: {
-      location: "",
-      departureTime: "",
-      contact: {
-        name: "",
-        tel: ""
-      }
-    }
+    
+    // 신랑측 배차 안내 (완벽 차단)
+    groomShuttle: false as any,
+    
+    // 신부측 배차 안내 (완벽 차단)
+    brideShuttle: false as any
   },
 
   // 갤러리
@@ -152,8 +140,8 @@ export const weddingConfig = {
 
   // RSVP 설정
   rsvp: {
-    enabled: false, // RSVP 섹션 표시 여부
-    showMealOption: false, // 식사 여부 입력 옵션 표시 여부
+    enabled: true, // RSVP 섹션 표시 여부 (테스트 완료하신 기능 On)
+    showMealOption: true, // 식사 여부 입력 옵션 표시 여부 (On)
   },
 
   // 슬랙 알림 설정
@@ -162,4 +150,4 @@ export const weddingConfig = {
     channel: "#wedding260801-전체",
     compactMessage: true, // 슬랙 메시지를 간결하게 표시
   },
-}; 
+};

@@ -61,8 +61,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   @font-face {
-    font-family: 'PlayfairDisplay';
-    src: url('/fonts/PlayfairDisplay-Italic.ttf') format('truetype');
+    font-family: 'GabiaCheongyeon';
+    src: url('/fonts/GabiaCheongyeon.otf') format('otf');
     font-weight: normal;
     font-style: italic;
     font-display: block;

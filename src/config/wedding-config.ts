@@ -140,8 +140,8 @@ export const weddingConfig = {
 
   // RSVP 설정
   rsvp: {
-    enabled: true, // RSVP 섹션 표시 여부 (테스트 완료하신 기능 On)
-    showMealOption: true, // 식사 여부 입력 옵션 표시 여부 (On)
+    enabled: false, // RSVP 섹션 표시 여부 (테스트 완료하신 기능 On)
+    showMealOption: false, // 식사 여부 입력 옵션 표시 여부 (On)
   },
 
   // 슬랙 알림 설정

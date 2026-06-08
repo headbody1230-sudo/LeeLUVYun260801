@@ -76,7 +76,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    font-family: 'MaruBuri', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    font-family: 'GabiaCheongyeon', 'MaruBuri', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
     color: #333333;
     margin: 0;
     padding: 0;

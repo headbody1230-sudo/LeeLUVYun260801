@@ -127,7 +127,7 @@ const VenueSection = ({ bgColor = 'white' }: VenueSectionProps) => {
         
         // 인포윈도우 생성
         const infoWindow = new window.naver.maps.InfoWindow({
-          content: `<div style="padding:10px;min-width:150px;text-align:center;font-size:14px;"><strong>${weddingConfig.venue.name}</strong></div>`
+          content: `<div style="padding:10px;min-width:150px;text-align:center;font-size:13px;white-space:pre-line;"><strong>${weddingConfig.venue.name}</strong></div>`
         });
         
         // 마커 클릭 시 인포윈도우 표시
@@ -360,6 +360,7 @@ const VenueName = styled.h3`
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
   font-weight: 500;
+  white-space: pre-line;
 `;
 
 const VenueAddress = styled.p`

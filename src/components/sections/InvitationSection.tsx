@@ -98,7 +98,7 @@ const InvitationMessage = styled.p`
   white-space: pre-line;
   line-height: 1.8;
   max-width: 36rem;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto 5rem auto;
   font-size: 1rem;
   
   @media (min-width: 768px) {

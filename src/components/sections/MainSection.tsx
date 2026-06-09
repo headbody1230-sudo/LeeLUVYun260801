@@ -28,7 +28,7 @@ const MainSection = () => {
 
       {/* 하단: 이름, 날짜, 장소 */}
       <BottomContent>
-        <NamesText>이상화 <span>º</span> 윤홍주</NamesText>
+        <NamesText>이상화 <span> · </span> 윤홍주</NamesText>
         <DateText>
           2026년 8월 1일 토요일<br />
           오후 3시 20분

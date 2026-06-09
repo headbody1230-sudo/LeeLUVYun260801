@@ -95,7 +95,7 @@ const TopContent = styled.div`
 const BottomContent = styled.div`
   position: absolute; /* 바닥을 기준으로 위치를 고정합니다 */
   z-index: 2;
-  bottom: 12%; /* 화면 맨 아래에서부터 12% 떠 있게 만듭니다. (깜빡이는 화살표 바로 위) */
+  bottom: 2%; /* 화면 맨 아래에서부터 12% 떠 있게 만듭니다. (깜빡이는 화살표 바로 위) */
   width: 100%;
   display: flex;
   flex-direction: column;

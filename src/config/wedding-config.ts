@@ -92,13 +92,13 @@ export const weddingConfig = {
     message: "온 세상을 물들이는 노을처럼\n서로의 삶에 스며들었습니다.\n\n가장 아름다운 순간에 약속합니다.\n저희의 첫걸음에 함께해주세요.",
     groom: {
       name: "이상화",
-      label: "첫째아들",
+      label: "장남",
       father: "이웅로",
       mother: "송혜숙",
     },
     bride: {
       name: "윤홍주",
-      label: "셋째딸",
+      label: "삼녀",
       father: "윤종영",
       mother: "김경란",
     },

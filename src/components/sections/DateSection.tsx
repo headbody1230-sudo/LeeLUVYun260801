@@ -155,7 +155,8 @@ const DateSection = ({ bgColor = 'white' }: DateSectionProps) => {
       )}
       
       <WeddingDate>
-        {weddingConfig.main.date}
+        2026년 8월 1일 토요일<br/>
+        오후 3시 20분
       </WeddingDate>
     </DateSectionContainer>
   );

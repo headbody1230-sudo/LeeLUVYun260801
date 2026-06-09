@@ -47,7 +47,7 @@ export const weddingConfig = {
   // 장소 정보
   venue: {
     name: "웨딩스퀘어 강변\n3층 루시드홀",
-    address: "서울특별시 광진구 광나루로56길 85\n웨딩스퀘어 강변",
+    address: "서울특별시 광진구 광나루로56길 85",
     tel: "02-3424-7000",
     naverMapId: "웨딩스퀘어 강변", // 네이버 지도 검색용 장소명
     coordinates: {

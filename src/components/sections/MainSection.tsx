@@ -30,8 +30,7 @@ const MainSection = () => {
       <BottomContent>
         <NamesText>이상화 <span> · </span> 윤홍주</NamesText>
         <DateText>
-          2026년 8월 1일 토요일<br />
-          오후 3시 20분
+          2026년 8월 1일 토요일 오후 3시 20분
         </DateText>
         <VenueText>웨딩스퀘어 강변</VenueText>
         

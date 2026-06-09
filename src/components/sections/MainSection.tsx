@@ -17,7 +17,7 @@ const MainSection = () => {
         fill
         priority
         sizes="100vw"
-        quality={90}
+        quality={100}
         style={{ objectFit: 'cover', objectPosition: 'center 10%' }}
       />
       <Overlay />
@@ -89,7 +89,7 @@ const MainContent = styled.div`
 `;
 
 const MainTitle = styled.h1`
-  font-family: 'PlayfairDisplay', 'Times New Roman', serif;
+  font-family: 'GabiaCheongyeon', 'PlayfairDisplay', 'Times New Roman', serif;
   font-style: italic;
   font-size: 3rem;
   min-height: 3rem;

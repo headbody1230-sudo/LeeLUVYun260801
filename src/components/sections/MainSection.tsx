@@ -91,12 +91,12 @@ const MainContent = styled.div`
 const MainTitle = styled.h1`
   font-family: 'GabiaCheongyeon', 'PlayfairDisplay', 'Times New Roman', serif;
   font-style: italic;
-  font-size: 3rem;
-  min-height: 3rem;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
+  font-size: 4rem;
+  min-height: 4rem;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.1;
   
   /* 기본 크기에서 세로 길이가 짧을 때 */
   @media (min-width: 769px) and (max-height: 700px) {

@@ -21,15 +21,24 @@ const MainSection = () => {
         style={{ objectFit: 'cover', objectPosition: 'center 10%' }}
       />
       <Overlay />
-      <MainContent>
+{/* 상단: 메인 타이틀 */}
+      <TopContent>
         <MainTitle>{weddingConfig.main.title}</MainTitle>
-        <DateText>{weddingConfig.main.date}</DateText>
-        <VenueText>{weddingConfig.main.venue}</VenueText>
-        {}
+      </TopContent>
+
+      {/* 하단: 이름, 날짜, 장소 */}
+      <BottomContent>
+        <NamesText>이상화 <span>º</span> 윤홍주</NamesText>
+        <DateText>
+          2026년 8월 1일 토요일<br />
+          오후 3시 20분
+        </DateText>
+        <VenueText>웨딩스퀘어 강변</VenueText>
+        
         <HiddenWatermark aria-hidden="true">
           {watermarkId}
         </HiddenWatermark>
-      </MainContent>
+      </BottomContent>
       
       <ScrollIndicator>
         <i className="fas fa-chevron-down"></i>
@@ -77,14 +86,34 @@ const Overlay = styled.div`
   z-index: 1;
 `;
 
-const MainContent = styled.div`
+const TopContent = styled.div`
   position: relative;
   z-index: 2;
-  margin-top: 0.5vh;
-  @media (max-width: 600px) {
-    margin-top: 0.5vh;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  width: 100%;
+  margin-top: 2vh; /* Wedding Invitation 글씨의 상단 여백입니다 */
+`;
+
+const BottomContent = styled.div`
+  position: absolute; /* 바닥을 기준으로 위치를 고정합니다 */
+  z-index: 2;
+  bottom: 12%; /* 화면 맨 아래에서부터 12% 떠 있게 만듭니다. (깜빡이는 화살표 바로 위) */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const NamesText = styled.p`
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  letter-spacing: 2px;
+  
+  /* 가운데 'º' 기호의 디자인을 미세하게 조정합니다 */
+  span {
+    font-size: 1rem;
+    margin: 0 0.5rem;
+    vertical-align: middle;
   }
 `;
 

@@ -21,8 +21,8 @@ const watermarkId = weddingConfig.meta._jwk_watermark_id || 'JWK-NonCommercial';
 export const GlobalStyle = createGlobalStyle`
   /* 폰트 로딩 전에 적용될 스타일 */
   @font-face {
-    font-family: 'MaruBuri';
-    src: url('/fonts/MaruBuri-ExtraLight.ttf') format('truetype');
+    font-family: 'Griun_PolSensibility-Rg';
+    src: url('/fonts/Griun_PolSensibility-Rg.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
     font-display: block; /* 폰트 로딩될 때까지 텍스트를 보이지 않게 함 */
@@ -76,7 +76,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    font-family: 'GabiaCheongyeon', 'MaruBuri', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    font-family: 'Griun_PolSensibility-Rg', 'GabiaCheongyeon', 'MaruBuri', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
     color: #333333;
     margin: 0;
     padding: 0;

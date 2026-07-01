@@ -23,7 +23,7 @@ export const weddingConfig = {
   // 메인 화면
   main: {
     title: "Wedding Invitation",
-    image: "/images/main.JPG",
+    image: "/images/main.jpg",
     date: "2026년 8월 1일 토요일\n오후 3시 20분",
     venue: "웨딩스퀘어 강변"
   },

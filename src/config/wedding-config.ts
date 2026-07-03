@@ -22,7 +22,7 @@ export const weddingConfig = {
 
   // 메인 화면
   main: {
-    title: "Wedding Invitation",
+    title: "",
     image: "/images/main.jpg",
     date: "2026년 8월 1일 토요일\n오후 3시 20분",
     venue: "웨딩스퀘어 강변"
@@ -46,7 +46,7 @@ export const weddingConfig = {
 
   // 장소 정보
   venue: {
-    name: "웨딩스퀘어 강변\n3층 루시드홀",
+    name: "웨딩스퀘어 강변 3층 루시드홀",
     address: "서울특별시 광진구 광나루로56길 85",
     tel: "02-3424-7000",
     naverMapId: "웨딩스퀘어 강변", // 네이버 지도 검색용 장소명
@@ -99,18 +99,7 @@ export const weddingConfig = {
       "/images/gallery/22.jpg",
       "/images/gallery/23.jpg",
       "/images/gallery/24.jpg",
-      "/images/gallery/25.jpg",
-      "/images/gallery/26.jpg",
-      "/images/gallery/27.jpg",
-      "/images/gallery/28.jpg",
-      "/images/gallery/29.jpg",
-      "/images/gallery/30.jpg",
-      "/images/gallery/31.jpg",
-      "/images/gallery/32.jpg",
-      "/images/gallery/33.jpg",
-      "/images/gallery/34.jpg",
-      "/images/gallery/35.jpg",
-      "/images/gallery/36.jpg",
+
       
     ],
   } as GalleryConfig,

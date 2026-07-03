@@ -12,20 +12,28 @@ const watermarkId = weddingConfig.meta._jwk_watermark_id || 'JWK-NonCommercial';
  * 라이선스: CC BY-NC-ND 4.0
  * 저작자표시-비영리-변경금지
  * https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ko
- * 
- * 이 코드는 비상업적 용도로만 사용 가능합니다.
+ * * 이 코드는 비상업적 용도로만 사용 가능합니다.
  * 상업적 용도로 사용 시 법적 조치가 취해질 수 있습니다.
  * ID: ${watermarkId}
  */
 
 export const GlobalStyle = createGlobalStyle`
-  /* 폰트 로딩 전에 적용될 스타일 */
+  /* 메인 타이틀용 영월 폰트 등록 (otf = opentype) */
+  @font-face {
+    font-family: 'Yeongwol';
+    src: url('/fonts/Yeongwol.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
+  /* 전체 바탕용 KBIZmjR 폰트 등록 (ttf = truetype) */
   @font-face {
     font-family: 'KBIZmjR';
     src: url('/fonts/KBIZmjR.ttf') format('truetype');
-    font-weight: 200;
+    font-weight: normal;
     font-style: normal;
-    font-display: block; /* 폰트 로딩될 때까지 텍스트를 보이지 않게 함 */
+    font-display: block;
   }
   
   @font-face {
@@ -59,14 +67,6 @@ export const GlobalStyle = createGlobalStyle`
     font-style: normal;
     font-display: block;
   }
-
-  @font-face {
-    font-family: 'KBIZmjR';
-    src: url('/fonts/KBIZmjR.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-    font-display: block;
-  }
   
   /* 컨텐츠가 바로 보이지만 폰트가 로드되면 레이아웃이 바뀌는 것을 방지 */
   html, body {
@@ -75,6 +75,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 16px;
   }
   
+  /* 청첩장 전체 기본 폰트를 KBIZmjR로 1순위 지정 */
   body {
     font-family: 'KBIZmjR', 'MaruBuri', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
     color: #333333;
@@ -127,4 +128,4 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-touch-callout: none;
     pointer-events: none;
   }
-`; 
+`;

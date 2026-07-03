@@ -18,7 +18,7 @@ const Footer = () => {
       {/* WeddingInvitation-Footer-NonCommercial DO NOT CHANGE*/}
       <FooterContent>
         <Copyright>© {currentYear}</Copyright>
-        <Credits>Made with ❤️</Credits>
+        <Credits>Lee Sang Hwa & Yun Hong Joo</Credits>
       
         <HiddenAttribution data-jwk-id={watermarkId}>
           NonCommercial

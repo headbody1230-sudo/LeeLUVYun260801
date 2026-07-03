@@ -61,8 +61,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   @font-face {
-    font-family: 'GabiaCheongyeon';
-    src: url('/fonts/GabiaCheongyeon.otf') format('opentype');
+    font-family: 'KBIZmjR';
+    src: url('/fonts/KBIZmjR.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
     font-display: block;
@@ -76,7 +76,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    font-family: 'MapoGoldenPier', 'Griun_PolSensibility-Rg', 'GabiaCheongyeon', 'MaruBuri', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    font-family: 'KBIZmjR', 'MaruBuri', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
     color: #333333;
     margin: 0;
     padding: 0;

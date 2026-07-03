@@ -21,7 +21,8 @@ const MainSection = () => {
         style={{ objectFit: 'cover', objectPosition: 'center 10%' }}
       />
       <Overlay />
-{/* 상단: 메인 타이틀 */}
+      
+      {/* 상단: 메인 타이틀 */}
       <TopContent>
         <MainTitle>{weddingConfig.main.title}</MainTitle>
       </TopContent>
@@ -66,8 +67,8 @@ const MainSectionContainer = styled.section`
     max-width: calc(100vh * 9 / 16);
     width: auto;
     margin: 0 auto;
-    border-radius: 24px; /* 선택사항: 모서리 둥글게 */
-    box-shadow: 0 0 32px rgba(0,0,0,0.08); /* 선택사항: 그림자 */
+    border-radius: 24px;
+    box-shadow: 0 0 32px rgba(0,0,0,0.08);
   }
 `;
 
@@ -89,13 +90,13 @@ const TopContent = styled.div`
   position: relative;
   z-index: 2;
   width: 100%;
-  margin-top: 2vh; /* Wedding Invitation 글씨의 상단 여백입니다 */
+  margin-top: 2vh;
 `;
 
 const BottomContent = styled.div`
-  position: absolute; /* 바닥을 기준으로 위치를 고정합니다 */
+  position: absolute;
   z-index: 2;
-  bottom: 2%; /* 화면 맨 아래에서부터 12% 떠 있게 만듭니다. (깜빡이는 화살표 바로 위) */
+  bottom: 2%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -108,7 +109,6 @@ const NamesText = styled.p`
   margin-bottom: 0.8rem;
   letter-spacing: 2px;
   
-  /* 가운데 'º' 기호의 디자인을 미세하게 조정합니다 */
   span {
     font-size: 1rem;
     margin: 0 0.5rem;
@@ -116,169 +116,58 @@ const NamesText = styled.p`
   }
 `;
 
+/* 🚀 유동적 타이포그래피가 적용된 메인 타이틀 */
 const MainTitle = styled.h1`
   font-family: 'Yeongwol', 'PlayfairDisplay', 'Times New Roman', serif;
   font-style: normal;
-  font-size: 4rem;
-  min-height: 4rem;
-  letter-spacing: 1px;
+  
+  /* clamp(최소 크기, 권장 크기(화면 너비 비례), 최대 크기) */
+  /* 화면 가로폭의 11.5% 크기를 유지하되, 아무리 작아도 2rem, 아무리 커도 5.5rem을 넘지 않게 제어합니다. */
+  font-size: clamp(2rem, 11.5vw, 5.5rem); 
+  min-height: clamp(2rem, 11.5vw, 5.5rem);
+  
+  letter-spacing: 0px; 
   margin-bottom: 1.5rem;
   font-weight: 400;
   line-height: 1.1;
   
-  /* 기본 크기에서 세로 길이가 짧을 때 */
-  @media (min-width: 769px) and (max-height: 700px) {
-    letter-spacing: 1.5px;
-    margin-bottom: 0.8rem;
-  }
-  @media (min-width: 769px) and (max-height: 600px) {
-    letter-spacing: 1px;
-    margin-bottom: 0.6rem;
-  }
+  /* 완벽한 1줄 유지를 위한 3가지 안전장치 */
+  white-space: nowrap; /* 절대 줄바꿈 금지 */
+  max-width: 94vw; /* 양옆 여백을 남기기 위해 화면 너비의 94%까지만 허용 */
+  margin-left: auto;
+  margin-right: auto;
   
-  @media (max-width: 768px) {
-    font-size: 2.5rem;
-    min-height: 2.5rem;
-  }
-  
-  /* 768px 이하에서 세로 길이가 짧을 때 */
-  @media (max-width: 768px) and (max-height: 650px) {
-    letter-spacing: 1px;
-    margin-bottom: 0.8rem;
-  }
-  @media (max-width: 768px) and (max-height: 550px) {
-    letter-spacing: 0.5px;
-    margin-bottom: 0.6rem;
-  }
-  
-  @media (max-width: 450px) {
-    font-size: 2rem;
-    min-height: 2rem;
-    letter-spacing: 1.5px;
-  }
-  
-  /* 450px 이하에서 세로 길이가 짧을 때 */
-  @media (max-width: 450px) and (max-height: 600px) {
-    letter-spacing: 1px;
-    margin-bottom: 0.8rem;
-  }
-  @media (max-width: 450px) and (max-height: 500px) {
-    letter-spacing: 0.5px;
-    margin-bottom: 0.6rem;
-  }
-  
-  @media (max-width: 360px) {
-    font-size: 1.8rem;
-    min-height: 1.8rem;
-    letter-spacing: 1px;
-  }
-  
-  /* 360px 이하에서 세로 길이가 짧을 때 */
-  @media (max-width: 360px) and (max-height: 550px) {
-    letter-spacing: 0.5px;
-    margin-bottom: 0.8rem;
-  }
-  @media (max-width: 360px) and (max-height: 450px) {
-    letter-spacing: 0.2px;
-    margin-bottom: 0.6rem;
-  }
-  
-  @media (max-width: 295px) {
-    font-size: 1.6rem;
-    min-height: 1.6rem;
-    letter-spacing: 0.5px;
-  }
-  
-  /* 295px 이하에서 세로 길이가 짧을 때 */
-  @media (max-width: 295px) and (max-height: 500px) {
-    letter-spacing: 0.2px;
-    margin-bottom: 0.8rem;
-  }
-  @media (max-width: 295px) and (max-height: 400px) {
-    letter-spacing: 0px;
-    margin-bottom: 0.6rem;
-  }
+  /* 세로 길이가 짧은 기기(ex. 구형 아이폰 등)를 위한 하단 여백 미세 조정 */
+  @media (max-height: 700px) { margin-bottom: 0.8rem; }
+  @media (max-height: 550px) { margin-bottom: 0.5rem; }
 `;
 
 const DateText = styled.p`
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
   
-  /* 기본 크기에서 세로 길이가 짧을 때 */
-  @media (min-width: 769px) and (max-height: 700px) {
-    margin-bottom: 0.4rem;
-  }
-  @media (min-width: 769px) and (max-height: 600px) {
-    margin-bottom: 0.3rem;
-  }
-  
-  @media (max-width: 768px) {
-    font-size: 1.2rem;
-    min-height: 0.3rem;
-  }
-  
-  /* 768px 이하에서 세로 길이가 짧을 때 */
-  @media (max-width: 768px) and (max-height: 650px) {
-    margin-bottom: 0.4rem;
-  }
-  @media (max-width: 768px) and (max-height: 550px) {
-    margin-bottom: 0.3rem;
-  }
-  
-  @media (max-width: 450px) {
-    font-size: 1.1rem;
-    margin-bottom: 0.15rem;
-  }
-  
-  /* 450px 이하에서 세로 길이가 짧을 때 */
-  @media (max-width: 450px) and (max-height: 600px) {
-    margin-bottom: 0.1rem;
-  }
-  @media (max-width: 450px) and (max-height: 500px) {
-    margin-bottom: 0.05rem;
-  }
-  
-  @media (max-width: 360px) {
-    font-size: 1rem;
-    margin-bottom: 0.1rem;
-  }
-  
-  /* 360px 이하에서 세로 길이가 짧을 때 */
-  @media (max-width: 360px) and (max-height: 550px) {
-    margin-bottom: 0.05rem;
-  }
-  @media (max-width: 360px) and (max-height: 450px) {
-    margin-bottom: 0.02rem;
-  }
-  
-  @media (max-width: 295px) {
-    font-size: 0.9rem;
-    margin-bottom: 0.05rem;
-  }
-  
-  /* 295px 이하에서 세로 길이가 짧을 때 */
-  @media (max-width: 295px) and (max-height: 500px) {
-    margin-bottom: 0.02rem;
-  }
-  @media (max-width: 295px) and (max-height: 400px) {
-    margin-bottom: 0rem;
-  }
+  @media (min-width: 769px) and (max-height: 700px) { margin-bottom: 0.4rem; }
+  @media (min-width: 769px) and (max-height: 600px) { margin-bottom: 0.3rem; }
+  @media (max-width: 768px) { font-size: 1.2rem; min-height: 0.3rem; }
+  @media (max-width: 768px) and (max-height: 650px) { margin-bottom: 0.4rem; }
+  @media (max-width: 768px) and (max-height: 550px) { margin-bottom: 0.3rem; }
+  @media (max-width: 450px) { font-size: 1.1rem; margin-bottom: 0.15rem; }
+  @media (max-width: 450px) and (max-height: 600px) { margin-bottom: 0.1rem; }
+  @media (max-width: 450px) and (max-height: 500px) { margin-bottom: 0.05rem; }
+  @media (max-width: 360px) { font-size: 1rem; margin-bottom: 0.1rem; }
+  @media (max-width: 360px) and (max-height: 550px) { margin-bottom: 0.05rem; }
+  @media (max-width: 360px) and (max-height: 450px) { margin-bottom: 0.02rem; }
+  @media (max-width: 295px) { font-size: 0.9rem; margin-bottom: 0.05rem; }
+  @media (max-width: 295px) and (max-height: 500px) { margin-bottom: 0.02rem; }
+  @media (max-width: 295px) and (max-height: 400px) { margin-bottom: 0rem; }
 `;
 
 const VenueText = styled.p`
   font-size: 1rem;
-  @media (max-width: 768px) {
-    font-size: 0.95rem;
-  }
-  @media (max-width: 450px) {
-    font-size: 0.9rem;
-  }
-  @media (max-width: 360px) {
-    font-size: 0.85rem;
-  }
-  @media (max-width: 295px) {
-    font-size: 0.75rem;
-  }
+  @media (max-width: 768px) { font-size: 0.95rem; }
+  @media (max-width: 450px) { font-size: 0.9rem; }
+  @media (max-width: 360px) { font-size: 0.85rem; }
+  @media (max-width: 295px) { font-size: 0.75rem; }
 `;
 
 const ScrollIndicator = styled.div`
@@ -290,15 +179,9 @@ const ScrollIndicator = styled.div`
   animation: bounce 2s infinite;
   
   @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateX(-50%) translateY(0);
-    }
-    40% {
-      transform: translateX(-50%) translateY(-20px);
-    }
-    60% {
-      transform: translateX(-50%) translateY(-10px);
-    }
+    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+    40% { transform: translateX(-50%) translateY(-20px); }
+    60% { transform: translateX(-50%) translateY(-10px); }
   }
 `;
 
@@ -314,4 +197,4 @@ const HiddenWatermark = styled.span`
   right: 0;
 `;
 
-export default MainSection; 
+export default MainSection;

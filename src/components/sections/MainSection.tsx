@@ -117,8 +117,8 @@ const NamesText = styled.p`
 `;
 
 const MainTitle = styled.h1`
-  font-family: 'GabiaCheongyeon', 'PlayfairDisplay', 'Times New Roman', serif;
-  font-style: italic;
+  font-family: 'Yeongwol', 'PlayfairDisplay', 'Times New Roman', serif;
+  font-style: normal;
   font-size: 4rem;
   min-height: 4rem;
   letter-spacing: 1px;

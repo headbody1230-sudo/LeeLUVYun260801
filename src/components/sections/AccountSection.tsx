@@ -22,9 +22,6 @@ const AccountSection = ({ bgColor = 'white' }: AccountSectionProps) => {
     brideMother: false,
   });
   
-  // URL 복사 상태 관리
-  const [urlCopied, setUrlCopied] = useState(false);
-
   // 계좌 그룹 열림/닫힘 상태 관리
   const [expandedSide, setExpandedSide] = useState<AccountSide | null>(null);
 
@@ -50,43 +47,6 @@ const AccountSection = ({ bgColor = 'white' }: AccountSectionProps) => {
     );
   };
   
-  // URL 복사 함수
-  const copyWebsiteUrl = () => {
-    const url = window.location.href;
-    navigator.clipboard.writeText(url).then(
-      () => {
-        setUrlCopied(true);
-        setTimeout(() => {
-          setUrlCopied(false);
-        }, 2000);
-      },
-      (err) => {
-        console.error('URL 복사 실패:', err);
-      }
-    );
-  };
-  
-  // 웹 공유 API를 사용한 공유 함수
-  const shareWebsite = async () => {
-    const shareData = {
-      title: weddingConfig.meta.title,
-      text: `${weddingConfig.invitation.groom.name} ♥ ${weddingConfig.invitation.bride.name}의 결혼식에 초대합니다`,
-      url: window.location.href,
-    };
-    
-    try {
-      if (navigator.share) {
-        await navigator.share(shareData);
-      } else {
-        // 공유 API를 지원하지 않는 경우 URL 복사로 대체
-        copyWebsiteUrl();
-        alert('이 브라우저는 공유 기능을 지원하지 않습니다. URL이 복사되었습니다.');
-      }
-    } catch (error) {
-      console.error('공유 실패:', error);
-    }
-  };
-
   // 각 인물에 해당하는 이름 가져오기
   const getPersonName = (person: AccountPerson): string => {
     switch(person) {
@@ -184,16 +144,6 @@ const AccountSection = ({ bgColor = 'white' }: AccountSectionProps) => {
           )}
         </AccountCard>
       </AccountCards>
-      
-      {/* 청첩장 공유하기 버튼 */}
-      <ShareContainer>
-        <ShareButton onClick={copyWebsiteUrl}>
-          {urlCopied ? '복사 완료!' : 'URL 복사하기'}
-        </ShareButton>
-        <ShareButton onClick={shareWebsite} $isShare={true}>
-          공유하기
-        </ShareButton>
-      </ShareContainer>
     </AccountSectionContainer>
   );
 };
@@ -315,12 +265,6 @@ const AccountRowTitle = styled.div`
   }
 `;
 
-const NameSpan = styled.span`
-  font-weight: 400;
-  font-size: 0.85rem;
-  color: var(--text-medium);
-`;
-
 const AccountRowInfo = styled.div`
   display: flex;
   flex-direction: column;
@@ -411,54 +355,4 @@ const CopyButton = styled.button`
   }
 `;
 
-const ShareContainer = styled.div`
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-`;
-
-const ShareButton = styled.button<{ $isShare?: boolean }>`
-  background-color: var(--secondary-color);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  flex: 1;
-  max-width: 180px;
-  
-  &:hover {
-    background-color: #c4a986;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-  }
-  
-  &:active {
-    transform: translateY(1px);
-  }
-  
-  &:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 5px;
-    height: 5px;
-    background: rgba(255, 255, 255, 0.5);
-    opacity: 0;
-    border-radius: 100%;
-    transform: scale(1, 1) translate(-50%);
-    transform-origin: 50% 50%;
-  }
-  
-  &:active:after {
-    animation: ripple 0.6s ease-out;
-  }
-`;
-
-export default AccountSection; 
+export default AccountSection;

@@ -21,8 +21,8 @@ const watermarkId = weddingConfig.meta._jwk_watermark_id || 'JWK-NonCommercial';
 export const GlobalStyle = createGlobalStyle`
   /* 폰트 로딩 전에 적용될 스타일 */
   @font-face {
-    font-family: 'MapoGoldenPier';
-    src: url('/fonts/MapoGoldenPier.otf') format('opentype');
+    font-family: 'KBIZmjR';
+    src: url('/fonts/KBIZmjR.ttf') format('truetype');
     font-weight: 200;
     font-style: normal;
     font-display: block; /* 폰트 로딩될 때까지 텍스트를 보이지 않게 함 */

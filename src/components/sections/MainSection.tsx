@@ -17,7 +17,7 @@ const MainSection = () => {
         fill
         priority
         sizes="100vw"
-        quality={100}
+        quality={90}
         style={{ objectFit: 'cover', objectPosition: 'center 10%' }}
       />
       <Overlay />

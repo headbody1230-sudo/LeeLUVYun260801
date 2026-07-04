@@ -104,13 +104,13 @@ const BottomContent = styled.div`
 `;
 
 const NamesText = styled.p`
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 500;
   margin-bottom: 0.8rem;
   letter-spacing: 2px;
   
   span {
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 0 0.5rem;
     vertical-align: middle;
   }
@@ -163,7 +163,7 @@ const DateText = styled.p`
 `;
 
 const VenueText = styled.p`
-  font-size: 1rem;
+  font-size: 1.2rem;
   @media (max-width: 768px) { font-size: 0.95rem; }
   @media (max-width: 450px) { font-size: 0.9rem; }
   @media (max-width: 360px) { font-size: 0.85rem; }

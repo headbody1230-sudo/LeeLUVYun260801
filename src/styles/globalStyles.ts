@@ -78,10 +78,10 @@ export const GlobalStyle = createGlobalStyle`
   /* 청첩장 전체 기본 폰트를 KBIZmjR로 1순위 지정 */
   body {
     font-family: 'KBIZmjR', 'MaruBuri', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
-    color: #333333;
+    color: #000000;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.8;
   }
 
   body::after {
@@ -113,11 +113,11 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   :root {
-    --primary-color: #F8F6F2;
+    --primary-color: #ffffff;
     --secondary-color: #D4B996; 
-    --text-dark: #333333;
-    --text-medium: #666666;
-    --text-light: #999999;
+    --text-dark: #000000;
+    --text-medium: #333333;
+    --text-light: #555555;
     --jwk-id: "${watermarkId}";
   }
   

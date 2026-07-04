@@ -114,7 +114,7 @@ export const GlobalStyle = createGlobalStyle`
 
   :root {
     --primary-color: #ffffff;
-    --secondary-color: #D4B996; 
+    --secondary-color: #5a380b; 
     --text-dark: #000000;
     --text-medium: #333333;
     --text-light: #555555;

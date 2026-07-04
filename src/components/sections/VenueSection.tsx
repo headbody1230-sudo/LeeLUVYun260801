@@ -357,14 +357,14 @@ const VenueInfo = styled.div`
 `;
 
 const VenueName = styled.h3`
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
   font-weight: 500;
   white-space: pre-line;
 `;
 
 const VenueAddress = styled.p`
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 `;
 
 const VenueTel = styled.a`
@@ -518,11 +518,11 @@ const TransportItem = styled.div`
 
 const TransportLabel = styled.p`
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
 `;
 
 const TransportText = styled.p`
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--text-medium);
   white-space: pre-line;
 `;
@@ -537,11 +537,11 @@ const ShuttleInfo = styled.div`
 
 const ShuttleLabel = styled.p`
   font-weight: 500;
-  font-size: 0.875rem;
+  font-size: 1rem;
 `;
 
 const ShuttleText = styled.p`
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: var(--text-medium);
   display: flex;
   align-items: center;

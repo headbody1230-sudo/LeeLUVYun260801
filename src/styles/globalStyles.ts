@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
   /* 메인 타이틀용 영월 폰트 등록 (otf = opentype) */
   @font-face {
     font-family: 'Yeongwol';
-    src: url('/fonts/Yeongwol.otf') format('opentype');
+    src: url('/fonts/Yeongwol.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -30,7 +30,7 @@ export const GlobalStyle = createGlobalStyle`
   /* 전체 바탕용 KBIZmjR 폰트 등록 (ttf = truetype) */
   @font-face {
     font-family: 'KBIZmjR';
-    src: url('/fonts/KBIZmjR.ttf') format('truetype');
+    src: url('/fonts/KBIZmjR.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: block;

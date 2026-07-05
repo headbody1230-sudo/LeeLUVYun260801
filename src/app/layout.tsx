@@ -33,6 +33,21 @@ export default function RootLayout({
         {}
         <meta name="generator" content={`Wedding-Template-${watermarkId}`} />
         <meta name="description" content={metaDescription} />
+        
+        {/* Google Analytics 추적 스크립트 */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZT8J706QV2"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-ZT8J706QV2', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
       </head>
       <body>
         <GlobalStyle />
@@ -46,4 +61,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-} 
+}
